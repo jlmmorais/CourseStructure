@@ -1,0 +1,3256 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Discipline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Institution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LearningObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Module"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Program"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Test"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#discipline_has_module"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#discipline_has_prerequisite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#institution_has_program"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#module_has_test"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#program_has_discipline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_has_test"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_studies_module"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#student_studies_program"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#test_is_in_module"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#area"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#bibliography"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#degree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#format"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#institutionAbbreviation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#level"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#modality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#objective"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#stateAbbreviation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#student_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#testType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#workload"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ayrton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinemática"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cinemática_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Derivadas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ecologia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Economia_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elisa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Filas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Filas_EP1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Filas_EP2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Filas_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Francisco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Física"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gramática"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inglês_I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Integrais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Limites"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Limites_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mabel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pilhas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pilhas_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Raul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Séries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Séries_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Transformadas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Transformadas_Teste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Ayrton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Cinemática"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Cinemática_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Program"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Economia_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Elisa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Program"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Filas_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Francisco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Física"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Limites_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Discipline"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Mabel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Pilhas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Pilhas_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#Raul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Program"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Séries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Séries_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Module"/>
+        <NamedIndividual IRI="#Transformadas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LearningObject"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Test"/>
+        <NamedIndividual IRI="#Transformadas_Teste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Institution"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Institution"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Institution"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Física"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <NamedIndividual IRI="#Cinemática_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <NamedIndividual IRI="#Física"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+        <NamedIndividual IRI="#Cinemática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+        <NamedIndividual IRI="#Cinemática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Cinemática_Teste"/>
+        <NamedIndividual IRI="#Cinemática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <NamedIndividual IRI="#Séries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <NamedIndividual IRI="#Transformadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_prerequisite"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Economia_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <NamedIndividual IRI="#Física"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <NamedIndividual IRI="#Pilhas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_prerequisite"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Filas"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Filas"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Filas"/>
+        <NamedIndividual IRI="#Filas_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Filas"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Filas_Teste"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Física"/>
+        <NamedIndividual IRI="#Cinemática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Física"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Física"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <NamedIndividual IRI="#Gramática"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <NamedIndividual IRI="#Física"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Limites"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Limites"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Limites"/>
+        <NamedIndividual IRI="#Limites_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Limites"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Limites_Teste"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <NamedIndividual IRI="#Filas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <NamedIndividual IRI="#Pilhas_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+        <NamedIndividual IRI="#Pilhas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Pilhas_Teste"/>
+        <NamedIndividual IRI="#Pilhas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Teste"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+        <NamedIndividual IRI="#Ecologia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <NamedIndividual IRI="#Economia_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Limites_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_has_test"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Séries_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Derivadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Limites"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Séries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <NamedIndividual IRI="#Raul"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <NamedIndividual IRI="#Economia_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Séries"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Séries"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Séries"/>
+        <NamedIndividual IRI="#Séries_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Séries"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+        <NamedIndividual IRI="#Séries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Séries_Teste"/>
+        <NamedIndividual IRI="#Séries"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <NamedIndividual IRI="#Integrais"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_has_test"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <NamedIndividual IRI="#Transformadas_Teste"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+        <NamedIndividual IRI="#Transformadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+        <NamedIndividual IRI="#Transformadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <NamedIndividual IRI="#Transformadas_Teste"/>
+        <NamedIndividual IRI="#Transformadas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <Literal>Algoritmos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <Literal>Ensinar sobre os conceitos de algoritmos e suas aplicações.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Algoritmos"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+        <Literal>Exercício Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+        <Literal>EP 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+        <Literal>moodle.unifesp.br/ep1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Algoritmos_EP1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+        <Literal>Exercício Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+        <Literal>EP2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+        <Literal>moodle.unifesp.br/ep2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Algoritmos_EP2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+        <Literal>Lista de Algoritmos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+        <Literal>moodle.unifesp.br/lista_algoritmos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Algoritmos_Lista"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Algoritmos_Teste"/>
+        <Literal>Prova Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <Literal>Avançado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <Literal>Alocação Dinâmica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <Literal>Ensinar sobre a alocação dinâmica e suas aplicações.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+        <Literal>Lista 1 de alocação dinâmica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+        <Literal>www.learningobjects.com/lista1ad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Teste"/>
+        <Literal>Prova Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+        <Literal>Vídeo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+        <Literal>Vídeo sobre Alocação Dinâmica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+        <Literal>www.learningobjects.com/videoad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Alocação_Dinâmica_Vídeo1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <Literal>Ayrton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#student_id"/>
+        <NamedIndividual IRI="#Ayrton"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <Literal>Intermediário</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <Literal>Cinemática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <Literal>Ensinar os conceitos e as aplicações de cinemática.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Cinemática"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+        <Literal>Exercícios de cinemática 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+        <Literal>www.learningobjects.com/listacinematica1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Cinemática_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+        <Literal>Exercícios de Cinemática 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+        <Literal>www.learningobjects.com/listacinematica2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Cinemática_Lista2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Cinemática_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#area"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <Literal>Exatas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#degree"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <Literal>Superior</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modality"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <Literal>Presencial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <Literal>Ciência da Computação</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Ciência_da_Computação"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <Literal>&quot;Cálculo B&quot; e &quot;Um Curso de Cálculo: Vol. 1&quot;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <Literal>Cálculo I</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <Literal>Ensinar o aluno a calcular limites, derivadas e integrais.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Cálculo_I"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <Literal>Um Curso de Cálculo: Vol. 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <Literal>Cálculo II</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <Literal>Aprofundar os conceitos de integral e ensinar sobre séries e transformadas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Cálculo_II"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <Literal>Derivadas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <Literal>Ensinar sobre derivadas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Derivadas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+        <Literal>Exercícios sobre derivadas 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+        <Literal>www.learningobjects.com/derivadas1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Derivadas_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+        <Literal>Exercícios sobre derivadas 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+        <Literal>www.learningobjects.com/derivadas2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Derivadas_Lista2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Derivadas_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <Literal>Ecologia: de Indivíduos a Ecossistemas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <Literal>Ecologia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <Literal>Ensinar os conceitos básicos sobre Ecologia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Ecologia"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <Literal>Intermediário</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <Literal>Ecologia e o Homem</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <Literal>Ensinar as interações entre o homem e os ecossistemas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+        <Literal>Seminário</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+        <Literal>Seminário sobre Ecologia e o Homem</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+        <Literal>www.learningobjects.com/video-do-seminario</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Seminário"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Ecologia_e_o_Homem_Teste"/>
+        <Literal>Prova Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <Literal>Introdução à Economia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <Literal>Economia I</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <Literal>Ensinar os princípios básicos da Economia.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Economia_I"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <Literal>Elisa</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#student_id"/>
+        <NamedIndividual IRI="#Elisa"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#area"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <Literal>Exatas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#degree"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <Literal>Superior</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modality"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <Literal>Presencial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <Literal>Engenharia Ambiental</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Engenharia_Ambiental"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <Literal>Algoritmos: Teoria e Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <Literal>Estrutura de Dados I</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <Literal>Introduzir os alunos aos conceitos de estruturas de dados.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Estrutura_de_Dados_I"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Filas"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Filas"/>
+        <Literal>Filas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Filas"/>
+        <Literal>Ensinar o conceito de filas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Filas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+        <Literal>Exercício Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+        <Literal>Exercício sobre filas 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+        <Literal>www.learningobjects.com/moodle_ep1_filas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Filas_EP1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+        <Literal>Exercício Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+        <Literal>Exercício sobre fillas 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+        <Literal>www.learningobjects.com/moodle_ep2_filas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Filas_EP2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Filas_Teste"/>
+        <Literal>Prova Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <Literal>Francisco</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#student_id"/>
+        <NamedIndividual IRI="#Francisco"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">111</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Física"/>
+        <Literal>Fundamentos da Física</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Física"/>
+        <Literal>Física</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Física"/>
+        <Literal>Introduzir os conceitos básicos de física aos alunos.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Física"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <Literal>Gramática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <Literal>Ensinar os conceitos de gramática da Língua Inglesa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Gramática"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+        <Literal>Lista de gramática inglesa 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+        <Literal>www.learningobjects.com/listagramatica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Gramática_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Gramática_Teste"/>
+        <Literal>Prova Oral</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+        <Literal>Vídeo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+        <Literal>Vídeo sobre gramática - TED</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+        <Literal>www.learningobjects.com/videogramatica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Gramática_Vídeo1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <Literal>English Grammar in Use</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <Literal>Inglês I</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <Literal>Introduzir os alunos aos conceitos básicos da Língua Inglesa.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Inglês_I"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <Literal>Integrais</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <Literal>Ensinar sobre Integrais.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Integrais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+        <Literal>Lista sobre integrais</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+        <Literal>www.learningobjects.com/listaintegrais</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Integrais_Lista"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Integrais_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <Literal>Introdução à Lógica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <Literal>Introduzir os conceitos de lógica de programação.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Teste"/>
+        <Literal>Prova Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+        <Literal>Vídeo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+        <Literal>Vídeo de introdução à Lógica</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+        <Literal>www.learningobjects.com/logica_video_intro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Introdução_à_Lógica_Vídeo1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <Literal>Leis de Newton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <Literal>Introduzir as Leis de Newton.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Leis_de_Newton"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+        <Literal>Lista sobre Leis de Newton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+        <Literal>www.learningobjects.com/leisdenewton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Leis_de_Newton_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Limites"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Limites"/>
+        <Literal>Limites</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Limites"/>
+        <Literal>Ensinar sobre limites.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Limites"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+        <Literal>Lista sobre limites 1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+        <Literal>www.learningobjects.com/limites1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Limites_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+        <Literal>Lista sobre limites 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+        <Literal>www.learningobjects.com/limites2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Limites_Lista2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Limites_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bibliography"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <Literal>Algoritmos: Teoria e Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <Literal>Lógica de Programação</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <Literal>Ensinar conceitos de lógica de programação e introduzir os alunos às linguagens de programação.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Lógica_de_Programação"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <Literal>Mabel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#student_id"/>
+        <NamedIndividual IRI="#Mabel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <Literal>Pilhas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <Literal>Ensinar o conceito e as aplicações de pilhas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Pilhas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+        <Literal>Exercício Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+        <Literal>Exercício online sobre pilhas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+        <Literal>www.learningobjects.com/moodle_pilhas1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Pilhas_EP1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Pilhas_Teste"/>
+        <Literal>Prova Prática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <Literal>Princípios da Ecologia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <Literal>Ensinar os princípios da ecologia e suas aplicações.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Teste"/>
+        <Literal>Prova Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+        <Literal>Vídeo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+        <Literal>Vídeo TED sobre ecologia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+        <Literal>www.tedx.com/principiosecologia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Princípios_da_Ecologia_Vídeo1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <Literal>Básico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <Literal>Princípios de Mercado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <Literal>Ensinar sobre os princípios e o funcionamento do mercado.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+        <Literal>Seminário</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+        <Literal>Seminário sobre tendências do mercado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+        <Literal>www.learningobjects.com/gravacao_seminario_mercado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Seminário"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Princípios_de_Mercado_Teste"/>
+        <Literal>Prova Online</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Raul"/>
+        <Literal>Raul</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#student_id"/>
+        <NamedIndividual IRI="#Raul"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">050</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#area"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <Literal>Humanas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#degree"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <Literal>Superior</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#modality"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <Literal>Presencial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <Literal>Relações Internacionais</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Relações_Internacionais"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Séries"/>
+        <Literal>Intermediário</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Séries"/>
+        <Literal>Séries</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Séries"/>
+        <Literal>Ensinar sobre séries.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Séries"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+        <Literal>Lista de exercícios sobre séries</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+        <Literal>www.learningobjects.com/series1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Séries_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Séries_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#level"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <Literal>Avançado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <Literal>Transformadas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#objective"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <Literal>Ensinar sobre transformadas.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Transformadas"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+        <Literal>Lista de exercícios sobre transformadas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+        <Literal>www.learningobjects.com/transformadas1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Transformadas_Lista1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#format"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+        <Literal>Lista de exercícios sobre transformadas 2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#url"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+        <Literal>transformadas2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#workload"/>
+        <NamedIndividual IRI="#Transformadas_Lista2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#testType"/>
+        <NamedIndividual IRI="#Transformadas_Teste"/>
+        <Literal>Prova Escrita</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#institutionAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <Literal>UNIFEI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <Literal>Itajubá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <Literal>Universidade Federal de Itajubá</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stateAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_Itajubá"/>
+        <Literal>MG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#institutionAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+        <Literal>UNIFESP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+        <Literal>São José dos Campos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+        <Literal>Universidade Federal de São Paulo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stateAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_Federal_de_São_Paulo"/>
+        <Literal>SP</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#institutionAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+        <Literal>UnB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#location"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+        <Literal>Brasília</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+        <Literal>Universidade de Brasília</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#stateAbbreviation"/>
+        <NamedIndividual IRI="#Universidade_de_Brasília"/>
+        <Literal>DF</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#discipline_has_prerequisite"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <Class IRI="#Institution"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <Class IRI="#LearningObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#module_has_test"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <Class IRI="#Program"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <Class IRI="#Program"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_has_test"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#discipline_has_module"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#discipline_has_prerequisite"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#discipline_is_in_program"/>
+        <Class IRI="#Program"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#institution_has_program"/>
+        <Class IRI="#Program"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#learningObject_is_in_module"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#module_has_learningObject"/>
+        <Class IRI="#LearningObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#module_has_prerequisite"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#module_has_test"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#module_is_in_discipline"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#program_has_discipline"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#program_offered_in_institution"/>
+        <Class IRI="#Institution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_has_test"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_knows_learningObject"/>
+        <Class IRI="#LearningObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_studies_at_institution"/>
+        <Class IRI="#Institution"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_studies_discipline"/>
+        <Class IRI="#Discipline"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_studies_module"/>
+        <Class IRI="#Test"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#student_studies_program"/>
+        <Class IRI="#Program"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#test_is_in_module"/>
+        <Class IRI="#Module"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#area"/>
+        <Class IRI="#Program"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#bibliography"/>
+        <Class IRI="#Discipline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#degree"/>
+        <Class IRI="#Program"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#format"/>
+        <Class IRI="#LearningObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#institutionAbbreviation"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#level"/>
+        <Class IRI="#Module"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#location"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#modality"/>
+        <Class IRI="#Program"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <ObjectUnionOf>
+            <Class IRI="#Discipline"/>
+            <Class IRI="#Institution"/>
+            <Class IRI="#LearningObject"/>
+            <Class IRI="#Module"/>
+            <Class IRI="#Program"/>
+            <Class IRI="#Student"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#objective"/>
+        <ObjectUnionOf>
+            <Class IRI="#Discipline"/>
+            <Class IRI="#Module"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#stateAbbreviation"/>
+        <Class IRI="#Institution"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#student_id"/>
+        <Class IRI="#Student"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#testType"/>
+        <Class IRI="#Test"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#url"/>
+        <Class IRI="#LearningObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#workload"/>
+        <ObjectUnionOf>
+            <Class IRI="#Discipline"/>
+            <Class IRI="#LearningObject"/>
+            <Class IRI="#Module"/>
+            <Class IRI="#Program"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#area"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#bibliography"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#degree"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#format"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#institutionAbbreviation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#level"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#location"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#modality"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#objective"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#stateAbbreviation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#student_id"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#testType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#url"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#workload"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
