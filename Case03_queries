@@ -1,0 +1,75 @@
+Caso 3
+O aluno faz uma consulta ao sistema para listar o que ele ainda não aprendeu, considerando um determinado curso
+ou disciplina.
+----------------------------------------------------------------------------------------------------------------
+O que Francisco já viu das disciplinas do curso de Ciência da Computação?
+
+Inserção de disciplinas no curso de Ciência da Computação (insersão manual de indivíduos para fins de teste)
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT DATA { 
+  :Ciência_da_Computação :program_has_discipline :Cálculo_Numérico. 
+  :Ciência_da_Computação :program_has_discipline :Estrutura_de_Dados_II. 
+  :Ciência_da_Computação :program_has_discipline :Engenharia_de_Software.
+  :Ciência_da_Computação :program_has_discipline :Sistemas_Distribuídos.
+  :Ciência_da_Computação :program_has_discipline :Compiladores.
+  :Ciência_da_Computação :program_has_discipline :Grafos.
+  :Ciência_da_Computação :program_has_discipline :Banco_de_Dados.
+  :Ciência_da_Computação :program_has_discipline :Sistemas_Operacionais.
+  :Ciência_da_Computação :program_has_discipline :Probabilidade_e_Estatística.
+  :Ciência_da_Computação :program_has_discipline :Sistemas_Móveis.
+  :Ciência_da_Computação :program_has_discipline :Sistemas_Embarcados.
+  :Ciência_da_Computação :program_has_discipline :Programação_Orientada_a_Objetos.
+} ;
+
+-----------------------------------------------------------------------------------------------------------------
+
+Query para ver quais disciplinas do Curso Francisco ainda não viu
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplinas_Faltantes
+WHERE{
+	{
+			:Ciência_da_Computação :program_has_discipline ?Disciplinas_Faltantes . 
+	}MINUS{
+			:Francisco :student_studies_discipline ?Disciplinas_Faltantes . 
+	}
+}
+
+
+------------------------------------------------------------------------------------------------------------------
+Disciplinas do Francisco
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplinas_Francisco
+WHERE{
+		:Francisco :student_studies_discipline ?Disciplinas_Francisco . 
+}
+
+------------------------------------------------------------------------------------------------------------------
+Disciplinas da Computação
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplinas_Computacao
+WHERE{
+		:Ciência_da_Computação :program_has_discipline ?Disciplinas_Computacao . 
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
