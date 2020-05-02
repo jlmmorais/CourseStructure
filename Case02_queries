@@ -1,0 +1,73 @@
+Caso 2
+Raul quer verificar os objetos de aprendizagem, os módulos e as disciplinas que ele já domina.
+
+--------------------------------------------------------------------------------------------------
+Objetos de aprendizagem
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Objeto_de_Aprendizagem
+WHERE
+{
+		:Raul :student_knows_learningObject ?Objeto_de_Aprendizagem . 
+}
+
+---------------------------------------------------------------------------------------------------
+Módulos
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Modulo
+WHERE
+{
+		:Raul :student_studies_module ?Modulo . 
+}
+
+---------------------------------------------------------------------------------------------------
+Disciplinas
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplina
+WHERE
+{
+		:Raul :student_studies_discipline ?Disciplina .  
+}
+
+
+---------------------------------------------------------------------------------------------------
+Ver todos juntos
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplina ?Modulo ?Objeto_de_Aprendizagem
+WHERE {
+		{
+				: Raul : student_studies_discipline ?Disciplina .
+		} UNION {
+				: Raul : student_studies_module ?Modulo .
+		} UNION {
+				: Raul : student_knows_learningObject ?Objeto_de_Aprendizagem .
+		}
+}
+
+---------------------------------------------------------------------------------------------------
+Relacionar as disciplinas, os módulos e os objetos de aprendizagem
+que constam no perfil do Raul
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Disciplina ?Modulo ?Objeto_de_Aprendizagem
+WHERE {
+		: Raul : student_knows_learningObject ? Objeto_de_Aprendizagem .
+		?Objeto_de_Aprendizagem : learningObject_is_in_module ?Modulo .
+		?Modulo : module_is_in_discipline ?Disciplina .
+}
+
+---------------------------------------------------------------------------------------------------
+
+Ver todos os dados do Raul
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Predicado ?Objeto
+WHERE
+{
+  :Raul ?Predicado ?Objeto .
+}
+---------------------------------------------------------------------------------------------------
+
