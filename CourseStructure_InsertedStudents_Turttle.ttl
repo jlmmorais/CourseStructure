@@ -1,0 +1,1112 @@
+@prefix : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2> .
+
+<http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#discipline_has_module
+:discipline_has_module rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Discipline ;
+                       rdfs:range :Module .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#discipline_has_prerequisite
+:discipline_has_prerequisite rdf:type owl:ObjectProperty ;
+                             rdfs:domain :Discipline ;
+                             rdfs:range :Discipline .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#discipline_is_in_program
+:discipline_is_in_program rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Discipline ;
+                          rdfs:range :Program .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#institution_has_program
+:institution_has_program rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Institution ;
+                         rdfs:range :Program .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#learningObject_is_in_module
+:learningObject_is_in_module rdf:type owl:ObjectProperty ;
+                             rdfs:domain :LearningObject ;
+                             rdfs:range :Module .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#module_has_learningObject
+:module_has_learningObject rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Module ;
+                           rdfs:range :LearningObject .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#module_has_prerequisite
+:module_has_prerequisite rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Module ;
+                         rdfs:range :Module .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#module_has_test
+:module_has_test rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Module ;
+                 rdfs:range :Test .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#module_is_in_discipline
+:module_is_in_discipline rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Module ;
+                         rdfs:range :Discipline .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#program_has_discipline
+:program_has_discipline rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Program ;
+                        rdfs:range :Discipline .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#program_offered_in_institution
+:program_offered_in_institution rdf:type owl:ObjectProperty ;
+                                rdfs:domain :Program ;
+                                rdfs:range :Institution .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_has_test
+:student_has_test rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Student ;
+                  rdfs:range :Test .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_knows_learningObject
+:student_knows_learningObject rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Student ;
+                              rdfs:range :LearningObject .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_studies_at_institution
+:student_studies_at_institution rdf:type owl:ObjectProperty ;
+                                rdfs:domain :Student ;
+                                rdfs:range :Institution .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_studies_discipline
+:student_studies_discipline rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Student ;
+                            rdfs:range :Discipline .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_studies_module
+:student_studies_module rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Student ;
+                        rdfs:range :Test .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_studies_program
+:student_studies_program rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Student ;
+                         rdfs:range :Program .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#test_is_in_module
+:test_is_in_module rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Test ;
+                   rdfs:range :Module .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#area
+:area rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Program ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#bibliography
+:bibliography rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Discipline ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#degree
+:degree rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Program ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#format
+:format rdf:type owl:DatatypeProperty ;
+        rdfs:domain :LearningObject ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#institutionAbbreviation
+:institutionAbbreviation rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :Institution ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#level
+:level rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Module ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Institution ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#modality
+:modality rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Program ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Discipline
+                                  :Institution
+                                  :LearningObject
+                                  :Module
+                                  :Program
+                                  :Student
+                                )
+                  ] ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#objective
+:objective rdf:type owl:DatatypeProperty ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Discipline
+                                       :Module
+                                     )
+                       ] ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#stateAbbreviation
+:stateAbbreviation rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Institution ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#student_id
+:student_id rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Student ;
+            rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#testType
+:testType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Test ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :LearningObject ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#workload
+:workload rdf:type owl:DatatypeProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Discipline
+                                      :LearningObject
+                                      :Module
+                                      :Program
+                                    )
+                      ] ;
+          rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Discipline
+:Discipline rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Institution
+:Institution rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#LearningObject
+:LearningObject rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Module
+:Module rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Program
+:Program rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Student
+:Student rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Test
+:Test rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Algoritmos
+:Algoritmos rdf:type owl:NamedIndividual ,
+                     :Module ;
+            :module_has_learningObject :Algoritmos_EP1 ,
+                                       :Algoritmos_EP2 ,
+                                       :Algoritmos_Lista ;
+            :module_has_prerequisite :Introdução_à_Lógica ;
+            :module_has_test :Algoritmos_Teste ;
+            :module_is_in_discipline :Lógica_de_Programação ;
+            :level "Básico" ;
+            :name "Algoritmos" ;
+            :objective "Ensinar sobre os conceitos de algoritmos e suas aplicações." ;
+            :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Algoritmos_EP1
+:Algoritmos_EP1 rdf:type owl:NamedIndividual ,
+                         :LearningObject ;
+                :learningObject_is_in_module :Algoritmos ;
+                :format "Exercício Online" ;
+                :name "EP 1" ;
+                :url "moodle.unifesp.br/ep1" ;
+                :workload 4 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Algoritmos_EP2
+:Algoritmos_EP2 rdf:type owl:NamedIndividual ,
+                         :LearningObject ;
+                :learningObject_is_in_module :Algoritmos ;
+                :format "Exercício Online" ;
+                :name "EP2" ;
+                :url "moodle.unifesp.br/ep2" ;
+                :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Algoritmos_Lista
+:Algoritmos_Lista rdf:type owl:NamedIndividual ,
+                           :LearningObject ;
+                  :learningObject_is_in_module :Algoritmos ;
+                  :format "PDF" ;
+                  :name "Lista de Algoritmos" ;
+                  :url "moodle.unifesp.br/lista_algoritmos" ;
+                  :workload 10 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Algoritmos_Teste
+:Algoritmos_Teste rdf:type owl:NamedIndividual ,
+                           :Test ;
+                  :test_is_in_module :Algoritmos ;
+                  :testType "Prova Prática" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Alocação_Dinâmica
+:Alocação_Dinâmica rdf:type owl:NamedIndividual ,
+                            :Module ;
+                   :module_has_learningObject :Alocação_Dinâmica_Lista1 ,
+                                              :Alocação_Dinâmica_Vídeo1 ;
+                   :module_has_prerequisite :Algoritmos ;
+                   :module_has_test :Alocação_Dinâmica_Teste ;
+                   :module_is_in_discipline :Estrutura_de_Dados_I ;
+                   :level "Avançado" ;
+                   :name "Alocação Dinâmica" ;
+                   :objective "Ensinar sobre a alocação dinâmica e suas aplicações." ;
+                   :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Alocação_Dinâmica_Lista1
+:Alocação_Dinâmica_Lista1 rdf:type owl:NamedIndividual ,
+                                   :LearningObject ;
+                          :learningObject_is_in_module :Alocação_Dinâmica ;
+                          :format "PDF" ;
+                          :name "Lista 1 de alocação dinâmica" ;
+                          :url "www.learningobjects.com/lista1ad" ;
+                          :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Alocação_Dinâmica_Teste
+:Alocação_Dinâmica_Teste rdf:type owl:NamedIndividual ,
+                                  :Test ;
+                         :test_is_in_module :Alocação_Dinâmica ;
+                         :testType "Prova Prática" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Alocação_Dinâmica_Vídeo1
+:Alocação_Dinâmica_Vídeo1 rdf:type owl:NamedIndividual ,
+                                   :LearningObject ;
+                          :learningObject_is_in_module :Alocação_Dinâmica ;
+                          :format "Vídeo" ;
+                          :name "Vídeo sobre Alocação Dinâmica" ;
+                          :url "www.learningobjects.com/videoad" ;
+                          :workload 2 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ayrton
+:Ayrton rdf:type owl:NamedIndividual ,
+                 :Student ;
+        :student_has_test :Ecologia_e_o_Homem_Teste ,
+                          :Leis_de_Newton_Teste ;
+        :student_knows_learningObject :Ecologia_e_o_Homem_Seminário ,
+                                      :Leis_de_Newton_Lista1 ;
+        :student_studies_at_institution :Universidade_Federal_de_Itajubá ;
+        :student_studies_discipline :Ecologia ,
+                                    :Física ;
+        :student_studies_module :Ecologia_e_o_Homem ,
+                                :Leis_de_Newton ;
+        :student_studies_program :Engenharia_Ambiental ;
+        :name "Ayrton"^^xsd:string ;
+        :student_id 002 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cinemática
+:Cinemática rdf:type owl:NamedIndividual ,
+                     :Module ;
+            :module_has_learningObject :Cinemática_Lista1 ,
+                                       :Cinemática_Lista2 ;
+            :module_has_test :Cinemática_Teste ;
+            :module_is_in_discipline :Física ;
+            :level "Intermediário" ;
+            :name "Cinemática" ;
+            :objective "Ensinar os conceitos e as aplicações de cinemática." ;
+            :workload 40 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cinemática_Lista1
+:Cinemática_Lista1 rdf:type owl:NamedIndividual ,
+                            :LearningObject ;
+                   :learningObject_is_in_module :Cinemática ;
+                   :format "PDF" ;
+                   :name "Exercícios de cinemática 1" ;
+                   :url "www.learningobjects.com/listacinematica1" ;
+                   :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cinemática_Lista2
+:Cinemática_Lista2 rdf:type owl:NamedIndividual ,
+                            :LearningObject ;
+                   :learningObject_is_in_module :Cinemática ;
+                   :format "PDF" ;
+                   :name "Exercícios de Cinemática 2" ;
+                   :url "www.learningobjects.com/listacinematica2" ;
+                   :workload 3 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cinemática_Teste
+:Cinemática_Teste rdf:type owl:NamedIndividual ,
+                           :Test ;
+                  :test_is_in_module :Cinemática ;
+                  :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ciência_da_Computação
+:Ciência_da_Computação rdf:type owl:NamedIndividual ,
+                                :Program ;
+                       :program_has_discipline :Cálculo_I ,
+                                               :Cálculo_II ,
+                                               :Estrutura_de_Dados_I ,
+                                               :Lógica_de_Programação ;
+                       :program_offered_in_institution :Universidade_Federal_de_Itajubá ,
+                                                       :Universidade_Federal_de_São_Paulo ;
+                       :area "Exatas" ;
+                       :degree "Superior" ;
+                       :modality "Presencial" ;
+                       :name "Ciência da Computação" ;
+                       :workload 3600 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cálculo_I
+:Cálculo_I rdf:type owl:NamedIndividual ,
+                    :Discipline ;
+           :discipline_has_module :Derivadas ,
+                                  :Integrais ,
+                                  :Limites ;
+           :discipline_is_in_program :Ciência_da_Computação ,
+                                     :Engenharia_Ambiental ;
+           :bibliography "\"Cálculo B\" e \"Um Curso de Cálculo: Vol. 1\"" ;
+           :name "Cálculo I" ;
+           :objective "Ensinar o aluno a calcular limites, derivadas e integrais." ;
+           :workload 60 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Cálculo_II
+:Cálculo_II rdf:type owl:NamedIndividual ,
+                     :Discipline ;
+            :discipline_has_module :Séries ,
+                                   :Transformadas ;
+            :discipline_has_prerequisite :Cálculo_I ;
+            :discipline_is_in_program :Ciência_da_Computação ;
+            :bibliography "Um Curso de Cálculo: Vol. 2" ;
+            :name "Cálculo II" ;
+            :objective "Aprofundar os conceitos de integral e ensinar sobre séries e transformadas." ;
+            :workload 60 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Derivadas
+:Derivadas rdf:type owl:NamedIndividual ,
+                    :Module ;
+           :module_has_learningObject :Derivadas_Lista1 ,
+                                      :Derivadas_Lista2 ;
+           :module_has_prerequisite :Limites ;
+           :module_has_test :Derivadas_Teste ;
+           :module_is_in_discipline :Cálculo_I ;
+           :level "Básico" ;
+           :name "Derivadas" ;
+           :objective "Ensinar sobre derivadas." ;
+           :workload 20 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Derivadas_Lista1
+:Derivadas_Lista1 rdf:type owl:NamedIndividual ,
+                           :LearningObject ;
+                  :learningObject_is_in_module :Derivadas ;
+                  :format "PDF" ;
+                  :name "Exercícios sobre derivadas 1" ;
+                  :url "www.learningobjects.com/derivadas1" ;
+                  :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Derivadas_Lista2
+:Derivadas_Lista2 rdf:type owl:NamedIndividual ,
+                           :LearningObject ;
+                  :learningObject_is_in_module :Derivadas ;
+                  :format "PDF" ;
+                  :name "Exercícios sobre derivadas 2" ;
+                  :url "www.learningobjects.com/derivadas2" ;
+                  :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Derivadas_Teste
+:Derivadas_Teste rdf:type owl:NamedIndividual ,
+                          :Test ;
+                 :test_is_in_module :Derivadas ;
+                 :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ecologia
+:Ecologia rdf:type owl:NamedIndividual ,
+                   :Discipline ;
+          :discipline_has_module :Ecologia_e_o_Homem ,
+                                 :Princípios_da_Ecologia ;
+          :discipline_is_in_program :Engenharia_Ambiental ;
+          :bibliography "Ecologia: de Indivíduos a Ecossistemas" ;
+          :name "Ecologia" ;
+          :objective "Ensinar os conceitos básicos sobre Ecologia" ;
+          :workload 60 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ecologia_e_o_Homem
+:Ecologia_e_o_Homem rdf:type owl:NamedIndividual ,
+                             :Module ;
+                    :module_has_learningObject :Ecologia_e_o_Homem_Seminário ;
+                    :module_has_test :Ecologia_e_o_Homem_Teste ;
+                    :module_is_in_discipline :Ecologia ;
+                    :level "Intermediário" ;
+                    :name "Ecologia e o Homem" ;
+                    :objective "Ensinar as interações entre o homem e os ecossistemas." ;
+                    :workload 20 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ecologia_e_o_Homem_Seminário
+:Ecologia_e_o_Homem_Seminário rdf:type owl:NamedIndividual ,
+                                       :LearningObject ;
+                              :learningObject_is_in_module :Ecologia_e_o_Homem ;
+                              :format "Seminário" ;
+                              :name "Seminário sobre Ecologia e o Homem" ;
+                              :url "www.learningobjects.com/video-do-seminario" ;
+                              :workload 6 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Ecologia_e_o_Homem_Teste
+:Ecologia_e_o_Homem_Teste rdf:type owl:NamedIndividual ,
+                                   :Test ;
+                          :test_is_in_module :Ecologia_e_o_Homem ;
+                          :testType "Prova Online" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Economia_I
+:Economia_I rdf:type owl:NamedIndividual ,
+                     :Discipline ;
+            :discipline_has_module :Princípios_de_Mercado ;
+            :discipline_is_in_program :Relações_Internacionais ;
+            :bibliography "Introdução à Economia" ;
+            :name "Economia I" ;
+            :objective "Ensinar os princípios básicos da Economia." ;
+            :workload 70 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Elisa
+:Elisa rdf:type owl:NamedIndividual ,
+                :Student ;
+       :student_has_test :Gramática_Teste ,
+                         :Princípios_de_Mercado_Teste ;
+       :student_knows_learningObject :Gramática_Lista1 ,
+                                     :Gramática_Vídeo1 ,
+                                     :Princípios_de_Mercado_Seminário ;
+       :student_studies_at_institution :Universidade_de_Brasília ;
+       :student_studies_discipline :Economia_I ,
+                                   :Inglês_I ;
+       :student_studies_module :Gramática ,
+                               :Princípios_de_Mercado ;
+       :student_studies_program :Relações_Internacionais ;
+       :name "Elisa"^^xsd:string ;
+       :student_id 123 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Engenharia_Ambiental
+:Engenharia_Ambiental rdf:type owl:NamedIndividual ,
+                               :Program ;
+                      :program_has_discipline :Cálculo_I ,
+                                              :Ecologia ,
+                                              :Física ;
+                      :program_offered_in_institution :Universidade_Federal_de_Itajubá ;
+                      :area "Exatas" ;
+                      :degree "Superior" ;
+                      :modality "Presencial" ;
+                      :name "Engenharia Ambiental" ;
+                      :workload 3400 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Estrutura_de_Dados_I
+:Estrutura_de_Dados_I rdf:type owl:NamedIndividual ,
+                               :Discipline ;
+                      :discipline_has_module :Alocação_Dinâmica ,
+                                             :Filas ,
+                                             :Pilhas ;
+                      :discipline_has_prerequisite :Lógica_de_Programação ;
+                      :discipline_is_in_program :Ciência_da_Computação ;
+                      :bibliography "Algoritmos: Teoria e Prática" ;
+                      :name "Estrutura de Dados I" ;
+                      :objective "Introduzir os alunos aos conceitos de estruturas de dados." ;
+                      :workload 60 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Filas
+:Filas rdf:type owl:NamedIndividual ,
+                :Module ;
+       :module_has_learningObject :Filas_EP1 ,
+                                  :Filas_EP2 ;
+       :module_has_test :Filas_Teste ;
+       :module_is_in_discipline :Estrutura_de_Dados_I ;
+       :level "Básico" ;
+       :name "Filas" ;
+       :objective "Ensinar o conceito de filas." ;
+       :workload 15 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Filas_EP1
+:Filas_EP1 rdf:type owl:NamedIndividual ,
+                    :LearningObject ;
+           :learningObject_is_in_module :Filas ;
+           :format "Exercício Online" ;
+           :name "Exercício sobre filas 1" ;
+           :url "www.learningobjects.com/moodle_ep1_filas" ;
+           :workload 3 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Filas_EP2
+:Filas_EP2 rdf:type owl:NamedIndividual ,
+                    :LearningObject ;
+           :learningObject_is_in_module :Filas ;
+           :format "Exercício Online" ;
+           :name "Exercício sobre fillas 2" ;
+           :url "www.learningobjects.com/moodle_ep2_filas" ;
+           :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Filas_Teste
+:Filas_Teste rdf:type owl:NamedIndividual ,
+                      :Test ;
+             :test_is_in_module :Filas ;
+             :testType "Prova Prática" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Francisco
+:Francisco rdf:type owl:NamedIndividual ,
+                    :Student ;
+           :student_knows_learningObject :Introdução_à_Lógica_Vídeo1 ,
+                                         :Limites_Lista1 ;
+           :student_studies_at_institution :Universidade_Federal_de_São_Paulo ;
+           :student_studies_discipline :Cálculo_I ,
+                                       :Lógica_de_Programação ;
+           :student_studies_module :Introdução_à_Lógica ,
+                                   :Limites ;
+           :student_studies_program :Ciência_da_Computação ;
+           :name "Francisco"^^xsd:string ;
+           :student_id 111 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Física
+:Física rdf:type owl:NamedIndividual ,
+                 :Discipline ;
+        :discipline_has_module :Cinemática ,
+                               :Leis_de_Newton ;
+        :discipline_is_in_program :Engenharia_Ambiental ;
+        :bibliography "Fundamentos da Física" ;
+        :name "Física" ;
+        :objective "Introduzir os conceitos básicos de física aos alunos." ;
+        :workload 50 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Gramática
+:Gramática rdf:type owl:NamedIndividual ,
+                    :Module ;
+           :module_has_learningObject :Gramática_Lista1 ,
+                                      :Gramática_Vídeo1 ;
+           :module_has_test :Gramática_Teste ;
+           :module_is_in_discipline :Inglês_I ;
+           :level "Básico" ;
+           :name "Gramática" ;
+           :objective "Ensinar os conceitos de gramática da Língua Inglesa." ;
+           :workload 40 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Gramática_Lista1
+:Gramática_Lista1 rdf:type owl:NamedIndividual ,
+                           :LearningObject ;
+                  :learningObject_is_in_module :Gramática ;
+                  :format "PDF" ;
+                  :name "Lista de gramática inglesa 1" ;
+                  :url "www.learningobjects.com/listagramatica" ;
+                  :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Gramática_Teste
+:Gramática_Teste rdf:type owl:NamedIndividual ,
+                          :Test ;
+                 :test_is_in_module :Gramática ;
+                 :testType "Prova Oral" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Gramática_Vídeo1
+:Gramática_Vídeo1 rdf:type owl:NamedIndividual ,
+                           :LearningObject ;
+                  :learningObject_is_in_module :Gramática ;
+                  :format "Vídeo" ;
+                  :name "Vídeo sobre gramática - TED" ;
+                  :url "www.learningobjects.com/videogramatica" ;
+                  :workload 1 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Inglês_I
+:Inglês_I rdf:type owl:NamedIndividual ,
+                   :Discipline ;
+          :discipline_has_module :Gramática ;
+          :discipline_is_in_program :Relações_Internacionais ;
+          :bibliography "English Grammar in Use" ;
+          :name "Inglês I" ;
+          :objective "Introduzir os alunos aos conceitos básicos da Língua Inglesa." ;
+          :workload 40 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Integrais
+:Integrais rdf:type owl:NamedIndividual ,
+                    :Module ;
+           :module_has_learningObject :Integrais_Lista ;
+           :module_has_prerequisite :Derivadas ;
+           :module_has_test :Integrais_Teste ;
+           :module_is_in_discipline :Cálculo_I ;
+           :level "Básico" ;
+           :name "Integrais" ;
+           :objective "Ensinar sobre Integrais." ;
+           :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Integrais_Lista
+:Integrais_Lista rdf:type owl:NamedIndividual ,
+                          :LearningObject ;
+                 :learningObject_is_in_module :Integrais ;
+                 :format "PDF" ;
+                 :name "Lista sobre integrais" ;
+                 :url "www.learningobjects.com/listaintegrais" ;
+                 :workload 8 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Integrais_Teste
+:Integrais_Teste rdf:type owl:NamedIndividual ,
+                          :Test ;
+                 :test_is_in_module :Integrais ;
+                 :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Introdução_à_Lógica
+:Introdução_à_Lógica rdf:type owl:NamedIndividual ,
+                              :Module ;
+                     :module_has_learningObject :Introdução_à_Lógica_Vídeo1 ;
+                     :module_has_test :Introdução_à_Lógica_Teste ;
+                     :module_is_in_discipline :Lógica_de_Programação ;
+                     :level "Básico" ;
+                     :name "Introdução à Lógica" ;
+                     :objective "Introduzir os conceitos de lógica de programação." ;
+                     :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Introdução_à_Lógica_Teste
+:Introdução_à_Lógica_Teste rdf:type owl:NamedIndividual ,
+                                    :Test ;
+                           :test_is_in_module :Introdução_à_Lógica ;
+                           :testType "Prova Online" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Introdução_à_Lógica_Vídeo1
+:Introdução_à_Lógica_Vídeo1 rdf:type owl:NamedIndividual ,
+                                     :LearningObject ;
+                            :learningObject_is_in_module :Introdução_à_Lógica ;
+                            :format "Vídeo" ;
+                            :name "Vídeo de introdução à Lógica" ;
+                            :url "www.learningobjects.com/logica_video_intro" ;
+                            :workload 2 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Leis_de_Newton
+:Leis_de_Newton rdf:type owl:NamedIndividual ,
+                         :Module ;
+                :module_has_learningObject :Leis_de_Newton_Lista1 ;
+                :module_has_test :Leis_de_Newton_Teste ;
+                :module_is_in_discipline :Física ;
+                :level "Básico" ;
+                :name "Leis de Newton" ;
+                :objective "Introduzir as Leis de Newton." ;
+                :workload 20 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Leis_de_Newton_Lista1
+:Leis_de_Newton_Lista1 rdf:type owl:NamedIndividual ,
+                                :LearningObject ;
+                       :learningObject_is_in_module :Leis_de_Newton ;
+                       :format "PDF" ;
+                       :name "Lista sobre Leis de Newton" ;
+                       :url "www.learningobjects.com/leisdenewton" ;
+                       :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Leis_de_Newton_Teste
+:Leis_de_Newton_Teste rdf:type owl:NamedIndividual ,
+                               :Test ;
+                      :test_is_in_module :Leis_de_Newton ;
+                      :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Limites
+:Limites rdf:type owl:NamedIndividual ,
+                  :Module ;
+         :module_has_learningObject :Limites_Lista1 ,
+                                    :Limites_Lista2 ;
+         :module_has_test :Limites_Teste ;
+         :module_is_in_discipline :Cálculo_I ;
+         :level "Básico" ;
+         :name "Limites" ;
+         :objective "Ensinar sobre limites." ;
+         :workload 10 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Limites_Lista1
+:Limites_Lista1 rdf:type owl:NamedIndividual ,
+                         :LearningObject ;
+                :learningObject_is_in_module :Limites ;
+                :format "PDF" ;
+                :name "Lista sobre limites 1" ;
+                :url "www.learningobjects.com/limites1" ;
+                :workload 2 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Limites_Lista2
+:Limites_Lista2 rdf:type owl:NamedIndividual ,
+                         :LearningObject ;
+                :learningObject_is_in_module :Limites ;
+                :format "PDF" ;
+                :name "Lista sobre limites 2" ;
+                :url "www.learningobjects.com/limites2" ;
+                :workload 3 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Limites_Teste
+:Limites_Teste rdf:type owl:NamedIndividual ,
+                        :Test ;
+               :test_is_in_module :Limites ;
+               :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Lógica_de_Programação
+:Lógica_de_Programação rdf:type owl:NamedIndividual ,
+                                :Discipline ;
+                       :discipline_has_module :Algoritmos ,
+                                              :Introdução_à_Lógica ;
+                       :discipline_is_in_program :Ciência_da_Computação ;
+                       :bibliography "Algoritmos: Teoria e Prática" ;
+                       :name "Lógica de Programação" ;
+                       :objective "Ensinar conceitos de lógica de programação e introduzir os alunos às linguagens de programação." ;
+                       :workload 60 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Mabel
+:Mabel rdf:type owl:NamedIndividual ,
+                :Student ;
+       :student_has_test :Algoritmos_Teste ,
+                         :Alocação_Dinâmica_Teste ,
+                         :Introdução_à_Lógica_Teste ;
+       :student_knows_learningObject :Algoritmos_EP1 ,
+                                     :Alocação_Dinâmica_Lista1 ,
+                                     :Alocação_Dinâmica_Vídeo1 ,
+                                     :Filas_EP1 ,
+                                     :Introdução_à_Lógica_Vídeo1 ;
+       :student_studies_at_institution :Universidade_Federal_de_São_Paulo ;
+       :student_studies_discipline :Estrutura_de_Dados_I ,
+                                   :Lógica_de_Programação ;
+       :student_studies_module :Algoritmos ,
+                               :Alocação_Dinâmica ,
+                               :Filas ,
+                               :Introdução_à_Lógica ;
+       :student_studies_program :Ciência_da_Computação ;
+       :name "Mabel"^^xsd:string ;
+       :student_id 001 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Pilhas
+:Pilhas rdf:type owl:NamedIndividual ,
+                 :Module ;
+        :module_has_learningObject :Pilhas_EP1 ;
+        :module_has_prerequisite :Filas ;
+        :module_has_test :Pilhas_Teste ;
+        :module_is_in_discipline :Estrutura_de_Dados_I ;
+        :level "Básico" ;
+        :name "Pilhas" ;
+        :objective "Ensinar o conceito e as aplicações de pilhas." ;
+        :workload 15 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Pilhas_EP1
+:Pilhas_EP1 rdf:type owl:NamedIndividual ,
+                     :LearningObject ;
+            :learningObject_is_in_module :Pilhas ;
+            :format "Exercício Online" ;
+            :name "Exercício online sobre pilhas" ;
+            :url "www.learningobjects.com/moodle_pilhas1" ;
+            :workload 3 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Pilhas_Teste
+:Pilhas_Teste rdf:type owl:NamedIndividual ,
+                       :Test ;
+              :test_is_in_module :Pilhas ;
+              :testType "Prova Prática" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_da_Ecologia
+:Princípios_da_Ecologia rdf:type owl:NamedIndividual ,
+                                 :Module ;
+                        :module_has_learningObject :Princípios_da_Ecologia_Vídeo1 ;
+                        :module_has_test :Princípios_da_Ecologia_Teste ;
+                        :module_is_in_discipline :Ecologia ;
+                        :level "Básico" ;
+                        :name "Princípios da Ecologia" ;
+                        :objective "Ensinar os princípios da ecologia e suas aplicações." ;
+                        :workload 20 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_da_Ecologia_Teste
+:Princípios_da_Ecologia_Teste rdf:type owl:NamedIndividual ,
+                                       :Test ;
+                              :test_is_in_module :Ecologia ;
+                              :testType "Prova Online" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_da_Ecologia_Vídeo1
+:Princípios_da_Ecologia_Vídeo1 rdf:type owl:NamedIndividual ,
+                                        :LearningObject ;
+                               :learningObject_is_in_module :Ecologia ;
+                               :format "Vídeo" ;
+                               :name "Vídeo TED sobre ecologia" ;
+                               :url "www.tedx.com/principiosecologia" ;
+                               :workload 1 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_de_Mercado
+:Princípios_de_Mercado rdf:type owl:NamedIndividual ,
+                                :Module ;
+                       :module_has_learningObject :Princípios_de_Mercado_Seminário ;
+                       :module_has_test :Princípios_de_Mercado_Teste ;
+                       :module_is_in_discipline :Economia_I ;
+                       :level "Básico" ;
+                       :name "Princípios de Mercado" ;
+                       :objective "Ensinar sobre os princípios e o funcionamento do mercado." ;
+                       :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_de_Mercado_Seminário
+:Princípios_de_Mercado_Seminário rdf:type owl:NamedIndividual ,
+                                          :LearningObject ;
+                                 :learningObject_is_in_module :Princípios_de_Mercado ;
+                                 :format "Seminário" ;
+                                 :name "Seminário sobre tendências do mercado" ;
+                                 :url "www.learningobjects.com/gravacao_seminario_mercado" ;
+                                 :workload 4 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Princípios_de_Mercado_Teste
+:Princípios_de_Mercado_Teste rdf:type owl:NamedIndividual ,
+                                      :Test ;
+                             :test_is_in_module :Princípios_de_Mercado ;
+                             :testType "Prova Online" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Raul
+:Raul rdf:type owl:NamedIndividual ,
+               :Student ;
+      :student_has_test :Derivadas_Teste ,
+                        :Integrais_Teste ,
+                        :Limites_Teste ,
+                        :Séries_Teste ;
+      :student_knows_learningObject :Derivadas_Lista1 ,
+                                    :Derivadas_Lista2 ,
+                                    :Integrais_Lista ,
+                                    :Limites_Lista1 ,
+                                    :Limites_Lista2 ,
+                                    :Séries_Lista1 ;
+      :student_studies_at_institution :Universidade_Federal_de_São_Paulo ;
+      :student_studies_discipline :Cálculo_I ,
+                                  :Cálculo_II ;
+      :student_studies_module :Derivadas ,
+                              :Integrais ,
+                              :Limites ,
+                              :Séries ;
+      :student_studies_program :Ciência_da_Computação ;
+      :name "Raul"^^xsd:string ;
+      :student_id 050 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Relações_Internacionais
+:Relações_Internacionais rdf:type owl:NamedIndividual ,
+                                  :Program ;
+                         :program_has_discipline :Economia_I ,
+                                                 :Inglês_I ;
+                         :program_offered_in_institution :Universidade_de_Brasília ;
+                         :area "Humanas" ;
+                         :degree "Superior" ;
+                         :modality "Presencial" ;
+                         :name "Relações Internacionais" ;
+                         :workload 3000 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Séries
+:Séries rdf:type owl:NamedIndividual ,
+                 :Module ;
+        :module_has_learningObject :Séries_Lista1 ;
+        :module_has_prerequisite :Integrais ;
+        :module_has_test :Séries_Teste ;
+        :module_is_in_discipline :Cálculo_II ;
+        :level "Intermediário" ;
+        :name "Séries" ;
+        :objective "Ensinar sobre séries." ;
+        :workload 20 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Séries_Lista1
+:Séries_Lista1 rdf:type owl:NamedIndividual ,
+                        :LearningObject ;
+               :learningObject_is_in_module :Séries ;
+               :format "PDF" ;
+               :name "Lista de exercícios sobre séries" ;
+               :url "www.learningobjects.com/series1" ;
+               :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Séries_Teste
+:Séries_Teste rdf:type owl:NamedIndividual ,
+                       :Test ;
+              :test_is_in_module :Séries ;
+              :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Transformadas
+:Transformadas rdf:type owl:NamedIndividual ,
+                        :Module ;
+               :module_has_learningObject :Transformadas_Lista1 ,
+                                          :Transformadas_Lista2 ;
+               :module_has_prerequisite :Integrais ;
+               :module_has_test :Transformadas_Teste ;
+               :module_is_in_discipline :Cálculo_II ;
+               :level "Avançado" ;
+               :name "Transformadas" ;
+               :objective "Ensinar sobre transformadas." ;
+               :workload 30 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Transformadas_Lista1
+:Transformadas_Lista1 rdf:type owl:NamedIndividual ,
+                               :LearningObject ;
+                      :learningObject_is_in_module :Transformadas ;
+                      :format "PDF" ;
+                      :name "Lista de exercícios sobre transformadas" ;
+                      :url "www.learningobjects.com/transformadas1" ;
+                      :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Transformadas_Lista2
+:Transformadas_Lista2 rdf:type owl:NamedIndividual ,
+                               :LearningObject ;
+                      :learningObject_is_in_module :Transformadas ;
+                      :format "PDF" ;
+                      :name "Lista de exercícios sobre transformadas 2" ;
+                      :url "transformadas2" ;
+                      :workload 5 .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Transformadas_Teste
+:Transformadas_Teste rdf:type owl:NamedIndividual ,
+                              :Test ;
+                     :test_is_in_module :Transformadas ;
+                     :testType "Prova Escrita" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Universidade_Federal_de_Itajubá
+:Universidade_Federal_de_Itajubá rdf:type owl:NamedIndividual ,
+                                          :Institution ;
+                                 :institution_has_program :Ciência_da_Computação ,
+                                                          :Engenharia_Ambiental ;
+                                 :institutionAbbreviation "UNIFEI" ;
+                                 :location "Itajubá" ;
+                                 :name "Universidade Federal de Itajubá" ;
+                                 :stateAbbreviation "MG" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Universidade_Federal_de_São_Paulo
+:Universidade_Federal_de_São_Paulo rdf:type owl:NamedIndividual ,
+                                            :Institution ;
+                                   :institution_has_program :Ciência_da_Computação ;
+                                   :institutionAbbreviation "UNIFESP" ;
+                                   :location "São José dos Campos" ;
+                                   :name "Universidade Federal de São Paulo" ;
+                                   :stateAbbreviation "SP" .
+
+
+###  http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2#Universidade_de_Brasília
+:Universidade_de_Brasília rdf:type owl:NamedIndividual ,
+                                   :Institution ;
+                          :institution_has_program :Relações_Internacionais ;
+                          :institutionAbbreviation "UnB" ;
+                          :location "Brasília" ;
+                          :name "Universidade de Brasília" ;
+                          :stateAbbreviation "DF" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
