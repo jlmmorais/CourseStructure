@@ -1,0 +1,54 @@
+Caso 4
+A instituição faz uma consulta para levantar um mapa geral de disciplinas, módulos e objetos de aprendizagem,
+indicando quais são os mais estudados 
+
+------------------------------------------------------------------------------------------------------------------
+
+Considerando os dados iniciais com os alunos previamente inseridos, verificar os objetos de aprendizagem
+mais dominados:
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Objeto_de_Aprendizagem (COUNT(*) AS ?contador) 
+WHERE
+  {
+    ?alunos :student_knows_learningObject ?Objeto_de_Aprendizagem
+  }
+GROUP BY ?Objeto_de_Aprendizagem ORDER BY DESC(COUNT(*))
+
+-------------------------------------------------------------------------------------------------------------------
+Considerando apenas os objetos de aprendizagem da disciplina de Cálculo I
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Objeto_de_Aprendizagem (COUNT(*) AS ?Quantidade_de_alunos_que_dominam) 
+WHERE
+  {
+  	?alunos :student_studies_discipline :Cálculo_I .
+    :Cálculo_I :discipline_has_module ?modulo .
+    ?modulo :module_has_learningObject ?Objeto_de_Aprendizagem .
+    ?alunos :student_knows_learningObject ?Objeto_de_Aprendizagem .
+  }
+GROUP BY ?Objeto_de_Aprendizagem ORDER BY DESC(COUNT(*))
+
+-------------------------------------------------------------------------------------------------------------------
+Sala de aula da disciplina de Cálculo I com 30 alunos. Verificar os objetos de aprendizagem mais vistos
+
+-- (30 alunos inseridos arbitrariamente para testar - a inserção está no arquivo Insert30Students)
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Objeto_de_Aprendizagem (COUNT(*) AS ?Quantidade_de_alunos_que_dominam) 
+WHERE
+  {
+  	?alunos :student_studies_discipline :Cálculo_I .
+    :Cálculo_I :discipline_has_module ?modulo .
+    ?modulo :module_has_learningObject ?Objeto_de_Aprendizagem .
+    ?alunos :student_knows_learningObject ?Objeto_de_Aprendizagem .
+  }
+GROUP BY ?Objeto_de_Aprendizagem ORDER BY DESC(COUNT(*))
+
+
+
+
+
+
+
+

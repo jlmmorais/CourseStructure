@@ -1,0 +1,157 @@
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+INSERT DATA { 
+  :a1 :student_studies_discipline :Cálculo_I. 
+  :a1 :student_studies_module :Derivadas. 
+  :a1 :student_studies_module :Limites. 
+  :a1 :student_studies_module :Integrais.
+  :a1 :student_knows_learningObject :Derivadas_Lista1.
+  :a1 :student_knows_learningObject :Derivadas_Lista2.
+  :a1 :student_knows_learningObject :Limites_Lista2.
+  :a1 :student_knows_learningObject :Limites_Lista1.
+  :a1 :student_knows_learningObject :Integrais_Lista.
+  
+  :a2 :student_studies_discipline :Cálculo_I. 
+  :a2 :student_studies_module :Limites. 
+  :a2 :student_knows_learningObject :Limites_Lista1.
+  
+  :a3 :student_studies_discipline :Cálculo_I. 
+  :a3 :student_studies_module :Limites. 
+  :a3 :student_knows_learningObject :Limites_Lista2.
+  :a3 :student_knows_learningObject :Limites_Lista1.
+  
+  :a4 :student_studies_discipline :Cálculo_I. 
+  :a4 :student_studies_module :Limites.
+  :a4 :student_studies_module :Derivadas.  
+  :a4 :student_knows_learningObject :Derivadas_Lista2.
+  :a4 :student_knows_learningObject :Limites_Lista2.
+  
+  :a5 :student_studies_discipline :Cálculo_I. 
+  :a5 :student_studies_module :Derivadas. 
+  :a5 :student_studies_module :Limites. 
+  :a5 :student_studies_module :Integrais. 
+  :a5 :student_knows_learningObject :Integrais_Lista.
+  
+  :a6 :student_studies_discipline :Cálculo_I. 
+  :a6 :student_studies_module :Derivadas. 
+  :a6 :student_knows_learningObject :Derivadas_Lista2.
+  
+  :a7 :student_studies_discipline :Cálculo_I. 
+  :a7 :student_studies_module :Integrais. 
+  :a7 :student_knows_learningObject :Integrais_Lista.
+  
+  :a8 :student_studies_discipline :Cálculo_I. 
+  :a8 :student_studies_module :Derivadas. 
+  :a8 :student_knows_learningObject :Derivadas_Lista1.
+  
+  :a9 :student_studies_discipline :Cálculo_I. 
+  :a9 :student_studies_module :Limites. 
+  :a9 :student_knows_learningObject :Limites_Lista1.
+  
+  :a10 :student_studies_discipline :Cálculo_I. 
+  :a10 :student_studies_module :Derivadas. 
+  :a10 :student_studies_module :Limites. 
+  :a10 :student_studies_module :Integrais.
+  :a10 :student_knows_learningObject :Derivadas_Lista1.
+  :a10 :student_knows_learningObject :Derivadas_Lista2.
+  :a10 :student_knows_learningObject :Limites_Lista2.
+  :a10 :student_knows_learningObject :Limites_Lista1.
+  :a10 :student_knows_learningObject :Integrais_Lista.
+  
+  :a11 :student_studies_discipline :Cálculo_I. 
+  :a11 :student_studies_module :Limites. 
+  :a11 :student_knows_learningObject :Limites_Lista1.
+  
+  :a12 :student_studies_discipline :Cálculo_I. 
+  :a12 :student_studies_module :Limites. 
+  :a12 :student_knows_learningObject :Limites_Lista1.
+  
+  :a13 :student_studies_discipline :Cálculo_I. 
+  :a13 :student_studies_module :Derivadas. 
+  :a13 :student_knows_learningObject :Derivadas_Lista1.
+  :a13 :student_knows_learningObject :Derivadas_Lista2.
+  
+  :a14 :student_studies_discipline :Cálculo_I. 
+  :a14 :student_studies_module :Derivadas. 
+  :a14 :student_knows_learningObject :Derivadas_Lista2.
+  
+  :a15 :student_studies_discipline :Cálculo_I. 
+  :a15 :student_studies_module :Integrais. 
+  :a15 :student_knows_learningObject :Integrais_Lista.
+  
+  :a16 :student_studies_discipline :Cálculo_I. 
+  :a16 :student_studies_module :Derivadas. 
+  :a16 :student_knows_learningObject :Derivadas_Lista1.
+  
+  :a17 :student_studies_discipline :Cálculo_I. 
+  :a17 :student_studies_module :Limites. 
+  :a17 :student_knows_learningObject :Limites_Lista1.
+  :a17 :student_knows_learningObject :Limites_Lista2.
+  
+  :a18 :student_studies_discipline :Cálculo_I. 
+  :a18 :student_studies_module :Derivadas. 
+  :a18 :student_studies_module :Limites. 
+  :a18 :student_knows_learningObject :Derivadas_Lista2.
+  :a18 :student_knows_learningObject :Limites_Lista1.
+  
+  :a19 :student_studies_discipline :Cálculo_I. 
+  :a19 :student_studies_module :Derivadas. 
+  :a19 :student_studies_module :Limites. 
+  :a19 :student_knows_learningObject :Derivadas_Lista1.
+  :a19 :student_knows_learningObject :Derivadas_Lista2.
+  :a19 :student_knows_learningObject :Limites_Lista1.
+  
+  :a20 :student_studies_discipline :Cálculo_I. 
+  :a20 :student_studies_module :Limites. 
+  :a20 :student_knows_learningObject :Limites_Lista1.
+  
+  :a21 :student_studies_discipline :Cálculo_I. 
+  :a21 :student_studies_module :Limites. 
+  :a21 :student_knows_learningObject :Limites_Lista1.
+  
+  :a22 :student_studies_discipline :Cálculo_I. 
+  :a22 :student_studies_module :Derivadas. 
+  :a22 :student_knows_learningObject :Derivadas_Lista1.
+  
+  :a23 :student_studies_discipline :Cálculo_I. 
+  :a23 :student_studies_module :Derivadas. 
+  :a23 :student_studies_module :Limites. 
+  :a23 :student_studies_module :Integrais.
+  :a23 :student_knows_learningObject :Derivadas_Lista1.
+  :a23 :student_knows_learningObject :Derivadas_Lista2.
+  :a23 :student_knows_learningObject :Limites_Lista2.
+  :a23 :student_knows_learningObject :Limites_Lista1.
+  :a23 :student_knows_learningObject :Integrais_Lista.
+  
+  :a24 :student_studies_discipline :Cálculo_I. 
+  :a24 :student_studies_module :Limites. 
+  :a24 :student_knows_learningObject :Limites_Lista2.
+  
+  :a25 :student_studies_discipline :Cálculo_I. 
+  :a25 :student_studies_module :Derivadas. 
+  :a25 :student_knows_learningObject :Derivadas_Lista1.
+  
+  :a26 :student_studies_discipline :Cálculo_I. 
+  :a26 :student_studies_module :Integrais. 
+  :a26 :student_knows_learningObject :Integrais_Lista.
+  
+  :a27 :student_studies_discipline :Cálculo_I. 
+  :a27 :student_studies_module :Limites. 
+  :a27 :student_knows_learningObject :Limites_Lista1.
+  
+  :a28 :student_studies_discipline :Cálculo_I. 
+  :a28 :student_studies_module :Limites. 
+  :a28 :student_studies_module :Derivadas. 
+  :a28 :student_knows_learningObject :Derivadas_Lista1.
+  :a28 :student_knows_learningObject :Limites_Lista2.
+  :a28 :student_knows_learningObject :Limites_Lista1.
+  
+  :a29 :student_studies_discipline :Cálculo_I. 
+  :a29 :student_studies_module :Derivadas. 
+  :a29 :student_knows_learningObject :Derivadas_Lista1.
+  
+  :a30 :student_studies_discipline :Cálculo_I. 
+  :a30 :student_studies_module :Derivadas. 
+  :a30 :student_knows_learningObject :Derivadas_Lista2.
+} ;
