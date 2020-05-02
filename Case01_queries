@@ -1,0 +1,31 @@
+Caso 1: Francisco é um aluno de Ciência da Computação da UNIFESP. Ele estuda Cálculo I e faz o módulo
+de limites. Francisco concluiu o módulo de Limites e iniciou o módulo de Derivadas.
+
+--------------------------------------------------------------------------------------------------------
+Ver os dados do Francisco
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+SELECT ?Predicado ?Objeto
+WHERE
+{
+  :Francisco ?Predicado ?Objeto .
+}
+		
+---------------------------------------------------------------------------------------------------------
+Francisco terminou o módulo de Limites e começou a estudar Derivadas:
+
+PREFIX : <http://www.semanticweb.org/win7/ontologies/2019/5/untitled-ontology-2>
+
+INSERT DATA { 
+  :Francisco :student_knows_learningObject :Limites_Lista2. 
+  :Francisco :student_has_test :Limites_Teste. 
+  :Francisco :student_studies_module  :Derivadas. 
+} ;
+
+
+
+
+
+
+
+
